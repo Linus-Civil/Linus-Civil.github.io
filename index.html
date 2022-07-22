@@ -208,7 +208,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://linus-civil.github.io/2022/07/18/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://linus-civil.github.io/2022/07/21/git%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/white.jpg">
@@ -222,7 +222,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2022/07/18/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
+            <a href="/2022/07/21/git%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B/" class="post-title-link" itemprop="url">git简明教程</a>
         </h2>
 
         <div class="post-meta">
@@ -232,15 +232,24 @@
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2022-07-18 15:45:35" itemprop="dateCreated datePublished" datetime="2022-07-18T15:45:35-07:00">2022-07-18</time>
+              <time title="Created: 2022-07-21 11:02:02" itemprop="dateCreated datePublished" datetime="2022-07-21T11:02:02-07:00">2022-07-21</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-07-20 04:41:51" itemprop="dateModified" datetime="2022-07-20T04:41:51-07:00">2022-07-20</time>
+                <time title="Modified: 2022-07-22 01:30:59" itemprop="dateModified" datetime="2022-07-22T01:30:59-07:00">2022-07-22</time>
               </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Tools-of-Programming/" itemprop="url" rel="index"><span itemprop="name">Tools of Programming</span></a>
+                </span>
+            </span>
 
           
             <span class="post-meta-item" title="Symbols count in article">
@@ -248,14 +257,14 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>367</span>
+              <span>4.5k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>1 mins.</span>
+              <span>4 mins.</span>
             </span>
 
         </div>
@@ -267,13 +276,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+          <p>Git是目前世界上最先进的分布式版本控制系统，此文章简述了Git的基本原理、代码版本控制、GitHub联动（远程仓库）、分支管理以及标签管理等内容。</p>
+<p>Git安装后需要通过以下命令配置用户名和邮箱，被用于远程仓库记录commits的相关信息，即用于查询哪次提交是谁完成的，配置的用户名和邮箱<strong>不会用于</strong>push代码到远程仓库时的身份验证。 <code>--global</code>参数表示你这台机器上所有的Git仓库都会使用这个配置，当然也可以对某个仓库指定不同的用户名和Email地址。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">&quot;Your Name&quot;</span></span><br><span class="line">$ git config --global user.email <span class="string">&quot;email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<hr>
+<h2 id="基本原理"><a href="#基本原理" class="headerlink" title="基本原理"></a>基本原理</h2><p>Git跟踪代码仓库（Repository）中每个文件的改动，并基于改动提交的时间线形成日志（Log），后续便可根据相应的版本号进行版本回滚等操作。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2022/07/18/hello-world/#more" rel="contents">
+              <a class="btn" href="/2022/07/21/git%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -364,6 +375,18 @@
           <span class="site-state-item-count">1</span>
           <span class="site-state-item-name">posts</span>
         </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
