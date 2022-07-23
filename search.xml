@@ -110,21 +110,4 @@
         <tag>Version control</tag>
       </tags>
   </entry>
-  <entry>
-    <title>test</title>
-    <url>/uncategorized/test-1/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>test</title>
-    <url>/testmyweb/test/</url>
-    <content><![CDATA[<p>1111</p>
-]]></content>
-      <categories>
-        <category>testmyweb</category>
-      </categories>
-      <tags>
-        <tag>test</tag>
-      </tags>
-  </entry>
 </search>
