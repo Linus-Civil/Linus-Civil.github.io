@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+Allow: /archives/
+Allow: /tags/
+Allow: /categories/
+
+Disallow: /about/
+Disallow: /js/
+Disallow: /css/
+Disallow: /lib/
+Disallow: /images/.jpg$
+
+Sitemap: https://www.liuyong.info/sitemap.xml
+Sitemap: https://www.liuyong.info/baidusitemap.xml
