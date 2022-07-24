@@ -9,7 +9,7 @@ Disallow: /about/
 Disallow: /js/
 Disallow: /css/
 Disallow: /lib/
-Disallow: /images/.jpg$
+Disallow: /images/*.jpg
 
 Sitemap: https://www.liuyong.info/sitemap.xml
 Sitemap: https://www.liuyong.info/baidusitemap.xml
