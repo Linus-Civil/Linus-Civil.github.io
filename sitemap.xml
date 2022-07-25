@@ -31,7 +31,7 @@
 
   <url>
     <loc>https://liuyong.info/</loc>
-    <lastmod>2022-07-24</lastmod>
+    <lastmod>2022-07-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -39,14 +39,14 @@
   
   <url>
     <loc>https://liuyong.info/tags/Tutorial/</loc>
-    <lastmod>2022-07-24</lastmod>
+    <lastmod>2022-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://liuyong.info/tags/Version-control/</loc>
-    <lastmod>2022-07-24</lastmod>
+    <lastmod>2022-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -55,7 +55,7 @@
   
   <url>
     <loc>https://liuyong.info/categories/Tools-of-Programming/</loc>
-    <lastmod>2022-07-24</lastmod>
+    <lastmod>2022-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
