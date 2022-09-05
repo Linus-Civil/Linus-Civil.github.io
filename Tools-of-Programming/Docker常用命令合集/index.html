@@ -24,25 +24,29 @@
     var CONFIG = {"hostname":"liuyong.info","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="We must know, We will know">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Linus Page">
-<meta property="og:url" content="https://liuyong.info/index.html">
+  <meta name="description" content="概念介绍 Docker：是一个开放平台，用于开发、打包、交付（shipping）、运行应用。Docker允许用户将基础设施中的应用单独分割出来，形成更小的颗粒，从而提高交付软件的速度 Container：容器，可理解应用运行的环境，与虚拟机不同的是，容器为保持文件体积较小，可以只包含应用运行所必须的依赖库 Image：容器的镜像文件，当镜像未运行时，可以对其进行分享，构建等操作；当镜像运行时，才会">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Docker常用命令合集">
+<meta property="og:url" content="https://liuyong.info/Tools-of-Programming/Docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%90%88%E9%9B%86/index.html">
 <meta property="og:site_name" content="Linus Page">
-<meta property="og:description" content="We must know, We will know">
+<meta property="og:description" content="概念介绍 Docker：是一个开放平台，用于开发、打包、交付（shipping）、运行应用。Docker允许用户将基础设施中的应用单独分割出来，形成更小的颗粒，从而提高交付软件的速度 Container：容器，可理解应用运行的环境，与虚拟机不同的是，容器为保持文件体积较小，可以只包含应用运行所必须的依赖库 Image：容器的镜像文件，当镜像未运行时，可以对其进行分享，构建等操作；当镜像运行时，才会">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-09-05T03:27:53.000Z">
+<meta property="article:modified_time" content="2022-09-05T04:41:26.983Z">
 <meta property="article:author" content="Liu, Yong  (Linus)">
+<meta property="article:tag" content="Commands Collection">
+<meta property="article:tag" content="Development &amp; Deployment">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://liuyong.info/">
+<link rel="canonical" href="https://liuyong.info/Tools-of-Programming/Docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%90%88%E9%9B%86/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
@@ -60,7 +64,7 @@
   padding: 1px 4px;
 }
 </style>
-  <title>Linus Page - Technology|Science</title>
+  <title>Docker常用命令合集 | Linus Page</title>
   
 
 
@@ -203,9 +207,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
@@ -221,10 +226,9 @@
       <meta itemprop="name" content="Linus Page">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/Tools-of-Programming/Docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%90%88%E9%9B%86/" class="post-title-link" itemprop="url">Docker常用命令合集</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          Docker常用命令合集
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -247,6 +251,13 @@
             </span>
 
           
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
             <span class="post-meta-item" title="Symbols count in article">
               <span class="post-meta-item-icon">
                 <i class="fa fa-file-word-o"></i>
@@ -271,7 +282,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="概念介绍"><a href="#概念介绍" class="headerlink" title="概念介绍"></a>概念介绍</h1><ul>
+        <h1 id="概念介绍"><a href="#概念介绍" class="headerlink" title="概念介绍"></a>概念介绍</h1><ul>
 <li>Docker：是一个开放平台，用于开发、打包、交付（shipping）、运行应用。Docker允许用户将基础设施中的应用单独分割出来，形成更小的颗粒，从而提高交付软件的速度</li>
 <li>Container：容器，可理解应用运行的环境，与虚拟机不同的是，容器为保持文件体积较小，可以只包含应用运行所必须的依赖库</li>
 <li>Image：容器的镜像文件，当镜像未运行时，可以对其进行分享，构建等操作；当镜像运行时，才会创造容器环境（container environment），即Container是镜像的运行环境，注意二者的区别</li>
@@ -338,127 +349,79 @@
 </li>
 </ul>
 
-      
     </div>
 
     
     
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
+    <div class="post-widgets">
+      <div id="needsharebutton-postbottom">
+        <span class="btn">
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
+      </div>
+    </div>
+        <div class="reward-container">
+  <div>ENJOY THE CONTENT?! BUY ME A COFFEE.</div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    Donate
+  </button>
+  <div id="qr" style="display: none;">
       
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://liuyong.info/Tools-of-Programming/git%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B/">
+      <div style="display: inline-block;">
+        <img src="/images/alipay.jpg" alt="Liu, Yong  (Linus) Alipay">
+        <p>Alipay</p>
+      </div>
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/white.jpg">
-      <meta itemprop="name" content="Liu, Yong  (Linus)">
-      <meta itemprop="description" content="We must know, We will know">
-    </span>
+  </div>
+</div>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Linus Page">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/Tools-of-Programming/git%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B/" class="post-title-link" itemprop="url">git简明教程</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2022-07-21 11:02:02" itemprop="dateCreated datePublished" datetime="2022-07-21T11:02:02-07:00">2022-07-21</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-07-22 01:30:59" itemprop="dateModified" datetime="2022-07-22T01:30:59-07:00">2022-07-22</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Tools-of-Programming/" itemprop="url" rel="index"><span itemprop="name">Tools of Programming</span></a>
-                </span>
-            </span>
-
-          
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>4.5k</span>
-            </span>
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>4 mins.</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Git是目前世界上最先进的分布式版本控制系统，此文章简述了Git的基本原理、代码版本控制、GitHub联动（远程仓库）、分支管理以及标签管理等内容。</p>
-<p>Git安装后需要通过以下命令配置用户名和邮箱，被用于远程仓库记录commits的相关信息，即用于查询哪次提交是谁完成的，配置的用户名和邮箱<strong>不会用于</strong>push代码到远程仓库时的身份验证。 <code>--global</code>参数表示你这台机器上所有的Git仓库都会使用这个配置，当然也可以对某个仓库指定不同的用户名和Email地址。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">&quot;Your Name&quot;</span></span><br><span class="line">$ git config --global user.email <span class="string">&quot;email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="基本原理"><a href="#基本原理" class="headerlink" title="基本原理"></a>基本原理</h2><p>Git跟踪代码仓库（Repository）中每个文件的改动，并基于改动提交的时间线形成日志（Log），后续便可根据相应的版本号进行版本回滚等操作。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/Tools-of-Programming/git%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
-    </div>
 
-    
-    
-    
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:  </strong>Liu, Yong  (Linus)
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link: </strong>
+    <a href="https://liuyong.info/Tools-of-Programming/Docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%90%88%E9%9B%86/" title="Docker常用命令合集">https://liuyong.info/Tools-of-Programming/Docker常用命令合集/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
+          <div class="post-tags">
+              <a href="/tags/Commands-Collection/" rel="tag"># Commands Collection</a>
+              <a href="/tags/Development-Deployment/" rel="tag"># Development & Deployment</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/Tools-of-Programming/git%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B/" rel="prev" title="git简明教程">
+      <i class="fa fa-chevron-left"></i> git简明教程
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
       </footer>
+    
   </article>
   
   
-  
-
-
   
 
 
 
           </div>
           
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -505,6 +468,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A6%82%E5%BF%B5%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.</span> <span class="nav-text">概念介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4%E5%90%88%E9%9B%86"><span class="nav-number">2.</span> <span class="nav-text">基础命令合集</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Image%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4"><span class="nav-number">2.1.</span> <span class="nav-text">Image相关命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Container%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4"><span class="nav-number">2.2.</span> <span class="nav-text">Container相关命令</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%AB%98%E7%BA%A7%E5%91%BD%E4%BB%A4%E5%90%88%E9%9B%86"><span class="nav-number">3.</span> <span class="nav-text">高级命令合集</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Port"><span class="nav-number">3.1.</span> <span class="nav-text">Port</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-Network"><span class="nav-number">3.2.</span> <span class="nav-text">Docker Network</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-Compose"><span class="nav-number">3.3.</span> <span class="nav-text">Docker Compose</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Dockerfile"><span class="nav-number">3.4.</span> <span class="nav-text">Dockerfile</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-Volumes"><span class="nav-number">3.5.</span> <span class="nav-text">Docker Volumes</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -664,7 +628,7 @@
       quicklink({
         timeout : 3000,
         priority: true,
-        ignores : [uri => uri.includes('#'),uri => uri === 'https://liuyong.info/',]
+        ignores : [uri => uri.includes('#'),uri => uri === 'https://liuyong.info/Tools-of-Programming/Docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%90%88%E9%9B%86/',]
       });
       });
   </script>
@@ -678,6 +642,25 @@
         pbOptions.networks = "Wechat,Linkedin,Twitter,Facebook";
       new needShareButton('#needsharebutton-postbottom', pbOptions);
   </script>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '7fa1dabd5ac3e38860f4',
+      clientSecret: '966f38584d7cf613e369188a36aa77117d6a6df2',
+      repo        : 'page_comments',
+      owner       : 'Linus-Civil',
+      admin       : ['Linus-Civil'],
+      id          : '6d8ead3b3979ff79f88618fb28530109',
+        language: 'en',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
 
 </body>
 </html>
