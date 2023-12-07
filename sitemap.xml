@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://liuyong.info/PFC/%E5%85%B3%E4%BA%8E%E7%A6%BB%E6%95%A3%E5%85%83%E6%8E%A5%E8%A7%A6%E5%8A%9B%E7%BB%84%E6%9E%84%E5%88%86%E6%9E%90%E7%9A%84%E8%AE%A8%E8%AE%BA/</loc>
+    
+    <lastmod>2023-12-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://liuyong.info/Tools-of-Programming/Docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%90%88%E9%9B%86/</loc>
     
     <lastmod>2022-09-05</lastmod>
@@ -40,7 +49,7 @@
 
   <url>
     <loc>https://liuyong.info/</loc>
-    <lastmod>2022-09-05</lastmod>
+    <lastmod>2023-12-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -48,28 +57,35 @@
   
   <url>
     <loc>https://liuyong.info/tags/Tutorial/</loc>
-    <lastmod>2022-09-05</lastmod>
+    <lastmod>2023-12-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://liuyong.info/tags/Version-control/</loc>
-    <lastmod>2022-09-05</lastmod>
+    <lastmod>2023-12-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://liuyong.info/tags/Commands-Collection/</loc>
-    <lastmod>2022-09-05</lastmod>
+    <lastmod>2023-12-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://liuyong.info/tags/Development-Deployment/</loc>
-    <lastmod>2022-09-05</lastmod>
+    <lastmod>2023-12-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://liuyong.info/tags/Mechanics-Analysis/</loc>
+    <lastmod>2023-12-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -78,7 +94,14 @@
   
   <url>
     <loc>https://liuyong.info/categories/Tools-of-Programming/</loc>
-    <lastmod>2022-09-05</lastmod>
+    <lastmod>2023-12-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://liuyong.info/categories/PFC/</loc>
+    <lastmod>2023-12-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

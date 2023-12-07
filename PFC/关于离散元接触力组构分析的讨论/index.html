@@ -24,25 +24,41 @@
     var CONFIG = {"hostname":"liuyong.info","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="We must know, We will know">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Linus Page">
-<meta property="og:url" content="https://liuyong.info/index.html">
+  <meta name="description" content="Introduction所谓接触力组构分析（Analysis of Fabric Anisotropy），就是分析颗粒体系间法向、切向接触力的作用方向，研究力的传递规律，是研究细观介质的一个重要手段，可参考Rothenburg [1] 接触力分布函数相关内容。   图1 接触力组构分析示意图  # 二维案例  二维的情况就比较简单了，每两个颗粒间的接触力可以分为法向力和切向力，PFC中可以通过内置">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于离散元接触力组构分析的讨论">
+<meta property="og:url" content="https://liuyong.info/PFC/%E5%85%B3%E4%BA%8E%E7%A6%BB%E6%95%A3%E5%85%83%E6%8E%A5%E8%A7%A6%E5%8A%9B%E7%BB%84%E6%9E%84%E5%88%86%E6%9E%90%E7%9A%84%E8%AE%A8%E8%AE%BA/index.html">
 <meta property="og:site_name" content="Linus Page">
-<meta property="og:description" content="We must know, We will know">
+<meta property="og:description" content="Introduction所谓接触力组构分析（Analysis of Fabric Anisotropy），就是分析颗粒体系间法向、切向接触力的作用方向，研究力的传递规律，是研究细观介质的一个重要手段，可参考Rothenburg [1] 接触力分布函数相关内容。   图1 接触力组构分析示意图  # 二维案例  二维的情况就比较简单了，每两个颗粒间的接触力可以分为法向力和切向力，PFC中可以通过内置">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://liuyong.info/PFC/%E5%85%B3%E4%BA%8E%E7%A6%BB%E6%95%A3%E5%85%83%E6%8E%A5%E8%A7%A6%E5%8A%9B%E7%BB%84%E6%9E%84%E5%88%86%E6%9E%90%E7%9A%84%E8%AE%A8%E8%AE%BA/%E5%85%B3%E4%BA%8E%E7%A6%BB%E6%95%A3%E5%85%83%E6%8E%A5%E8%A7%A6%E5%8A%9B%E7%BB%84%E6%9E%84%E5%88%86%E6%9E%90%E7%9A%84%E8%AE%A8%E8%AE%BA%5C%E7%BB%84%E6%9E%84%E5%88%86%E6%9E%90.png">
+<meta property="og:image" content="https://liuyong.info/PFC/%E5%85%B3%E4%BA%8E%E7%A6%BB%E6%95%A3%E5%85%83%E6%8E%A5%E8%A7%A6%E5%8A%9B%E7%BB%84%E6%9E%84%E5%88%86%E6%9E%90%E7%9A%84%E8%AE%A8%E8%AE%BA/2dtn.png">
+<meta property="og:image" content="https://liuyong.info/PFC/%E5%85%B3%E4%BA%8E%E7%A6%BB%E6%95%A3%E5%85%83%E6%8E%A5%E8%A7%A6%E5%8A%9B%E7%BB%84%E6%9E%84%E5%88%86%E6%9E%90%E7%9A%84%E8%AE%A8%E8%AE%BA/tu3.png">
+<meta property="og:image" content="https://liuyong.info/PFC/%E5%85%B3%E4%BA%8E%E7%A6%BB%E6%95%A3%E5%85%83%E6%8E%A5%E8%A7%A6%E5%8A%9B%E7%BB%84%E6%9E%84%E5%88%86%E6%9E%90%E7%9A%84%E8%AE%A8%E8%AE%BA/shear_comp1.png">
+<meta property="og:image" content="https://liuyong.info/PFC/%E5%85%B3%E4%BA%8E%E7%A6%BB%E6%95%A3%E5%85%83%E6%8E%A5%E8%A7%A6%E5%8A%9B%E7%BB%84%E6%9E%84%E5%88%86%E6%9E%90%E7%9A%84%E8%AE%A8%E8%AE%BA/normal_comp1.png">
+<meta property="og:image" content="https://liuyong.info/PFC/%E5%85%B3%E4%BA%8E%E7%A6%BB%E6%95%A3%E5%85%83%E6%8E%A5%E8%A7%A6%E5%8A%9B%E7%BB%84%E6%9E%84%E5%88%86%E6%9E%90%E7%9A%84%E8%AE%A8%E8%AE%BA/shear_comp2.png">
+<meta property="og:image" content="https://liuyong.info/PFC/%E5%85%B3%E4%BA%8E%E7%A6%BB%E6%95%A3%E5%85%83%E6%8E%A5%E8%A7%A6%E5%8A%9B%E7%BB%84%E6%9E%84%E5%88%86%E6%9E%90%E7%9A%84%E8%AE%A8%E8%AE%BA/normal_comp2.png">
+<meta property="og:image" content="https://liuyong.info/PFC/%E5%85%B3%E4%BA%8E%E7%A6%BB%E6%95%A3%E5%85%83%E6%8E%A5%E8%A7%A6%E5%8A%9B%E7%BB%84%E6%9E%84%E5%88%86%E6%9E%90%E7%9A%84%E8%AE%A8%E8%AE%BA/sznormal.png">
+<meta property="og:image" content="https://liuyong.info/PFC/%E5%85%B3%E4%BA%8E%E7%A6%BB%E6%95%A3%E5%85%83%E6%8E%A5%E8%A7%A6%E5%8A%9B%E7%BB%84%E6%9E%84%E5%88%86%E6%9E%90%E7%9A%84%E8%AE%A8%E8%AE%BA/xoz.png">
+<meta property="og:image" content="https://liuyong.info/PFC/%E5%85%B3%E4%BA%8E%E7%A6%BB%E6%95%A3%E5%85%83%E6%8E%A5%E8%A7%A6%E5%8A%9B%E7%BB%84%E6%9E%84%E5%88%86%E6%9E%90%E7%9A%84%E8%AE%A8%E8%AE%BA/sc_xoz.png">
+<meta property="og:image" content="https://liuyong.info/PFC/%E5%85%B3%E4%BA%8E%E7%A6%BB%E6%95%A3%E5%85%83%E6%8E%A5%E8%A7%A6%E5%8A%9B%E7%BB%84%E6%9E%84%E5%88%86%E6%9E%90%E7%9A%84%E8%AE%A8%E8%AE%BA/ty_hb.png">
+<meta property="og:image" content="https://liuyong.info/PFC/%E5%85%B3%E4%BA%8E%E7%A6%BB%E6%95%A3%E5%85%83%E6%8E%A5%E8%A7%A6%E5%8A%9B%E7%BB%84%E6%9E%84%E5%88%86%E6%9E%90%E7%9A%84%E8%AE%A8%E8%AE%BA/xz_hb.png">
+<meta property="article:published_time" content="2023-12-07T01:42:05.000Z">
+<meta property="article:modified_time" content="2023-12-07T11:49:30.446Z">
 <meta property="article:author" content="Liu, Yong  (Linus)">
+<meta property="article:tag" content="Mechanics Analysis">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://liuyong.info/PFC/%E5%85%B3%E4%BA%8E%E7%A6%BB%E6%95%A3%E5%85%83%E6%8E%A5%E8%A7%A6%E5%8A%9B%E7%BB%84%E6%9E%84%E5%88%86%E6%9E%90%E7%9A%84%E8%AE%A8%E8%AE%BA/%E5%85%B3%E4%BA%8E%E7%A6%BB%E6%95%A3%E5%85%83%E6%8E%A5%E8%A7%A6%E5%8A%9B%E7%BB%84%E6%9E%84%E5%88%86%E6%9E%90%E7%9A%84%E8%AE%A8%E8%AE%BA%5C%E7%BB%84%E6%9E%84%E5%88%86%E6%9E%90.png">
 
-<link rel="canonical" href="https://liuyong.info/">
+<link rel="canonical" href="https://liuyong.info/PFC/%E5%85%B3%E4%BA%8E%E7%A6%BB%E6%95%A3%E5%85%83%E6%8E%A5%E8%A7%A6%E5%8A%9B%E7%BB%84%E6%9E%84%E5%88%86%E6%9E%90%E7%9A%84%E8%AE%A8%E8%AE%BA/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
@@ -60,7 +76,7 @@
   padding: 1px 4px;
 }
 </style>
-  <title>Linus Page - Technology|Science</title>
+  <title>关于离散元接触力组构分析的讨论 | Linus Page</title>
   
 
 
@@ -203,9 +219,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
@@ -221,10 +238,9 @@
       <meta itemprop="name" content="Linus Page">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/PFC/%E5%85%B3%E4%BA%8E%E7%A6%BB%E6%95%A3%E5%85%83%E6%8E%A5%E8%A7%A6%E5%8A%9B%E7%BB%84%E6%9E%84%E5%88%86%E6%9E%90%E7%9A%84%E8%AE%A8%E8%AE%BA/" class="post-title-link" itemprop="url">关于离散元接触力组构分析的讨论</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          关于离散元接触力组构分析的讨论
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -247,6 +263,13 @@
             </span>
 
           
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
             <span class="post-meta-item" title="Symbols count in article">
               <span class="post-meta-item-icon">
                 <i class="fa fa-file-word-o"></i>
@@ -271,7 +294,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>所谓接触力组构分析（Analysis of Fabric Anisotropy），就是分析颗粒体系间法向、切向接触力的作用方向，研究力的传递规律，是研究细观介质的一个重要手段，可参考Rothenburg <sup>[1]</sup> 接触力分布函数相关内容。</p>
+        <h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>所谓接触力组构分析（Analysis of Fabric Anisotropy），就是分析颗粒体系间法向、切向接触力的作用方向，研究力的传递规律，是研究细观介质的一个重要手段，可参考Rothenburg <sup>[1]</sup> 接触力分布函数相关内容。</p>
 <p><img src="/PFC/%E5%85%B3%E4%BA%8E%E7%A6%BB%E6%95%A3%E5%85%83%E6%8E%A5%E8%A7%A6%E5%8A%9B%E7%BB%84%E6%9E%84%E5%88%86%E6%9E%90%E7%9A%84%E8%AE%A8%E8%AE%BA/%E5%85%B3%E4%BA%8E%E7%A6%BB%E6%95%A3%E5%85%83%E6%8E%A5%E8%A7%A6%E5%8A%9B%E7%BB%84%E6%9E%84%E5%88%86%E6%9E%90%E7%9A%84%E8%AE%A8%E8%AE%BA%5C%E7%BB%84%E6%9E%84%E5%88%86%E6%9E%90.png"></p>
 <center> 图1 接触力组构分析示意图 </center>
 # 二维案例
@@ -324,219 +347,78 @@
 <h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><p>[1] ROTHENBURG L, BATHURST R J. Analytical study of  induced anisotropy in idealized granular materials[J].  Géotechnique, 1989, 39(4): 601–614.</p>
 <p>[2] 张强,汪小刚,赵宇飞,刘立鹏，林兴超，石崇.不同围压加载方式下土石混合体变形破坏机制颗粒流模拟研究[J].岩土工程学报, 2018, 40(11):10.DOI:10.11779&#x2F;CJGE201811011.</p>
 
-      
     </div>
 
     
     
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
+    <div class="post-widgets">
+      <div id="needsharebutton-postbottom">
+        <span class="btn">
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
+      </div>
+    </div>
+        <div class="reward-container">
+  <div>ENJOY THE CONTENT?! BUY ME A COFFEE.</div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    Donate
+  </button>
+  <div id="qr" style="display: none;">
       
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://liuyong.info/Tools-of-Programming/Docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%90%88%E9%9B%86/">
+      <div style="display: inline-block;">
+        <img src="/images/alipay.jpg" alt="Liu, Yong  (Linus) Alipay">
+        <p>Alipay</p>
+      </div>
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/white.jpg">
-      <meta itemprop="name" content="Liu, Yong  (Linus)">
-      <meta itemprop="description" content="We must know, We will know">
-    </span>
+  </div>
+</div>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Linus Page">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/Tools-of-Programming/Docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%90%88%E9%9B%86/" class="post-title-link" itemprop="url">Docker常用命令合集</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2022-09-05 11:27:53 / Modified: 12:43:58" itemprop="dateCreated datePublished" datetime="2022-09-05T11:27:53+08:00">2022-09-05</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Tools-of-Programming/" itemprop="url" rel="index"><span itemprop="name">Tools of Programming</span></a>
-                </span>
-            </span>
-
-          
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>2.1k</span>
-            </span>
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>2 mins.</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="概念介绍"><a href="#概念介绍" class="headerlink" title="概念介绍"></a>概念介绍</h1><ul>
-<li>Docker：是一个开放平台，用于开发、打包、交付（shipping）、运行应用。Docker允许用户将基础设施中的应用单独分割出来，形成更小的颗粒，从而提高交付软件的速度</li>
-<li>Container：容器，可理解应用运行的环境，与虚拟机不同的是，容器为保持文件体积较小，可以只包含应用运行所必须的依赖库</li>
-<li>Image：容器的镜像文件，当镜像未运行时，可以对其进行分享，构建等操作；当镜像运行时，才会创造容器环境（container environment），即Container是镜像的运行环境，注意二者的区别</li>
-<li>Docker Hub：公开的容器镜像仓库，可以在其他云服务提供商付费获取私人仓库</li>
-<li>Docker Desktop：Docker的图形界面软件，可以在图形界面上对镜像及容器进行管理；对于支持WSL 2的Windows系统而言，可以选择WSL 2作为Docker Desktop的后端，相较于Windows Hyper-V后端性能更好</li>
-</ul>
-<h1 id="基础命令合集"><a href="#基础命令合集" class="headerlink" title="基础命令合集"></a>基础命令合集</h1><h2 id="Image相关命令"><a href="#Image相关命令" class="headerlink" title="Image相关命令"></a>Image相关命令</h2><ul>
-<li><code>docker pull image_name:version</code> ：从Docker Hub拉取镜像</li>
-</ul>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/Tools-of-Programming/Docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%90%88%E9%9B%86/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
-    </div>
 
-    
-    
-    
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:  </strong>Liu, Yong  (Linus)
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link: </strong>
+    <a href="https://liuyong.info/PFC/%E5%85%B3%E4%BA%8E%E7%A6%BB%E6%95%A3%E5%85%83%E6%8E%A5%E8%A7%A6%E5%8A%9B%E7%BB%84%E6%9E%84%E5%88%86%E6%9E%90%E7%9A%84%E8%AE%A8%E8%AE%BA/" title="关于离散元接触力组构分析的讨论">https://liuyong.info/PFC/关于离散元接触力组构分析的讨论/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+          <div class="post-tags">
+              <a href="/tags/Mechanics-Analysis/" rel="tag"># Mechanics Analysis</a>
+          </div>
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://liuyong.info/Tools-of-Programming/git%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/white.jpg">
-      <meta itemprop="name" content="Liu, Yong  (Linus)">
-      <meta itemprop="description" content="We must know, We will know">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Linus Page">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/Tools-of-Programming/git%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B/" class="post-title-link" itemprop="url">git简明教程</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2022-07-22 02:02:02 / Modified: 16:30:59" itemprop="dateCreated datePublished" datetime="2022-07-22T02:02:02+08:00">2022-07-22</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Tools-of-Programming/" itemprop="url" rel="index"><span itemprop="name">Tools of Programming</span></a>
-                </span>
-            </span>
-
-          
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>4.5k</span>
-            </span>
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>4 mins.</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Git是目前世界上最先进的分布式版本控制系统，此文章简述了Git的基本原理、代码版本控制、GitHub联动（远程仓库）、分支管理以及标签管理等内容。</p>
-<p>Git安装后需要通过以下命令配置用户名和邮箱，被用于远程仓库记录commits的相关信息，即用于查询哪次提交是谁完成的，配置的用户名和邮箱<strong>不会用于</strong>push代码到远程仓库时的身份验证。 <code>--global</code>参数表示你这台机器上所有的Git仓库都会使用这个配置，当然也可以对某个仓库指定不同的用户名和Email地址。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">&quot;Your Name&quot;</span></span><br><span class="line">$ git config --global user.email <span class="string">&quot;email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="基本原理"><a href="#基本原理" class="headerlink" title="基本原理"></a>基本原理</h2><p>Git跟踪代码仓库（Repository）中每个文件的改动，并基于改动提交的时间线形成日志（Log），后续便可根据相应的版本号进行版本回滚等操作。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/Tools-of-Programming/git%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
-    </div>
 
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/Tools-of-Programming/Docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%90%88%E9%9B%86/" rel="prev" title="Docker常用命令合集">
+      <i class="fa fa-chevron-left"></i> Docker常用命令合集
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
       </footer>
+    
   </article>
   
   
-  
-
-
   
 
 
 
           </div>
           
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -583,6 +465,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E7%BB%B4%E6%A1%88%E4%BE%8B"><span class="nav-number">2.</span> <span class="nav-text">三维案例</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E7%BB%B4%E6%A8%A1%E5%9E%8B%E7%9A%84%E4%BA%8C%E7%BB%B4%E5%8F%AF%E8%A7%86%E5%8C%96%E5%B1%95%E7%A4%BA"><span class="nav-number">2.1.</span> <span class="nav-text">三维模型的二维可视化展示</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#y%E5%88%86%E9%87%8F%E4%B8%A2%E5%BC%83%E6%96%B9%E6%A1%88"><span class="nav-number">2.1.1.</span> <span class="nav-text">y分量丢弃方案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E5%90%91%E5%90%91%E9%87%8F%E6%97%8B%E8%BD%AC%E6%96%B9%E6%A1%88"><span class="nav-number">2.1.2.</span> <span class="nav-text">方向向量旋转方案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%A8%E8%AE%BA"><span class="nav-number">2.1.3.</span> <span class="nav-text">讨论</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E7%BB%B4%E6%A8%A1%E5%9E%8B%E7%9A%84%E4%B8%89%E7%BB%B4%E5%8F%AF%E8%A7%86%E5%8C%96%E5%B1%95%E7%A4%BA"><span class="nav-number">2.2.</span> <span class="nav-text">三维模型的三维可视化展示</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#References"><span class="nav-number">3.</span> <span class="nav-text">References</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -742,7 +625,7 @@
       quicklink({
         timeout : 3000,
         priority: true,
-        ignores : [uri => uri.includes('#'),uri => uri === 'https://liuyong.info/',]
+        ignores : [uri => uri.includes('#'),uri => uri === 'https://liuyong.info/PFC/%E5%85%B3%E4%BA%8E%E7%A6%BB%E6%95%A3%E5%85%83%E6%8E%A5%E8%A7%A6%E5%8A%9B%E7%BB%84%E6%9E%84%E5%88%86%E6%9E%90%E7%9A%84%E8%AE%A8%E8%AE%BA/',]
       });
       });
   </script>
@@ -756,6 +639,25 @@
         pbOptions.networks = "Wechat,Linkedin,Twitter,Facebook";
       new needShareButton('#needsharebutton-postbottom', pbOptions);
   </script>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '7fa1dabd5ac3e38860f4',
+      clientSecret: '966f38584d7cf613e369188a36aa77117d6a6df2',
+      repo        : 'page_comments',
+      owner       : 'Linus-Civil',
+      admin       : ['Linus-Civil'],
+      id          : '2fc3a0015b425f7889200ef50072fbea',
+        language: 'en',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
 
 </body>
 </html>
