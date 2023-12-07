@@ -196,7 +196,8 @@
     <title>关于离散元接触力组构分析的讨论</title>
     <url>/PFC/%E5%85%B3%E4%BA%8E%E7%A6%BB%E6%95%A3%E5%85%83%E6%8E%A5%E8%A7%A6%E5%8A%9B%E7%BB%84%E6%9E%84%E5%88%86%E6%9E%90%E7%9A%84%E8%AE%A8%E8%AE%BA/</url>
     <content><![CDATA[<h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>所谓接触力组构分析（Analysis of Fabric Anisotropy），就是分析颗粒体系间法向、切向接触力的作用方向，研究力的传递规律，是研究细观介质的一个重要手段，可参考Rothenburg <sup>[1]</sup> 接触力分布函数相关内容。</p>
-<p><img src="/PFC/%E5%85%B3%E4%BA%8E%E7%A6%BB%E6%95%A3%E5%85%83%E6%8E%A5%E8%A7%A6%E5%8A%9B%E7%BB%84%E6%9E%84%E5%88%86%E6%9E%90%E7%9A%84%E8%AE%A8%E8%AE%BA/%E5%85%B3%E4%BA%8E%E7%A6%BB%E6%95%A3%E5%85%83%E6%8E%A5%E8%A7%A6%E5%8A%9B%E7%BB%84%E6%9E%84%E5%88%86%E6%9E%90%E7%9A%84%E8%AE%A8%E8%AE%BA%5Czgfx.png"></p>
+  <div align="center"> <img src="/PFC/%E5%85%B3%E4%BA%8E%E7%A6%BB%E6%95%A3%E5%85%83%E6%8E%A5%E8%A7%A6%E5%8A%9B%E7%BB%84%E6%9E%84%E5%88%86%E6%9E%90%E7%9A%84%E8%AE%A8%E8%AE%BA/zgfx.png" width="70%" height="70%"> </div>  
+
 <center> 图1 接触力组构分析示意图 </center>
 # 二维案例
 
@@ -221,8 +222,9 @@
 
   <div align="center"> <img src="/PFC/%E5%85%B3%E4%BA%8E%E7%A6%BB%E6%95%A3%E5%85%83%E6%8E%A5%E8%A7%A6%E5%8A%9B%E7%BB%84%E6%9E%84%E5%88%86%E6%9E%90%E7%9A%84%E8%AE%A8%E8%AE%BA/sznormal.png" width="80%" height="80%"> </div>  
 <center>文献2中法向力的玫瑰花图结果</center>
+# 三维案例
 
-<h1 id="三维案例"><a href="#三维案例" class="headerlink" title="三维案例"></a>三维案例</h1><h2 id="三维模型的二维可视化展示"><a href="#三维模型的二维可视化展示" class="headerlink" title="三维模型的二维可视化展示"></a>三维模型的二维可视化展示</h2><p>对于三维离散元模型而言，二维的可视化展示就是继续用上面的二维玫瑰花图展示三维的接触力。石崇在<code>辅助分析小程序\6-2三维直接剪切xoz面组构分析-石\三维直接剪切xoz面组构图分布.exe</code>中给出了三维直剪案例的二维可视化程序。字面意思上理解，似乎是对于接触力的三维方向单位向量<code>(x,y,z)</code>，直接舍弃掉<code>y</code>分量，然后通过<code>arctan(z/x)</code>来计算接触力所属的方位子区间。直觉上理解，就是把三维空间沿着<code>y</code>轴投影到<code>XOZ</code>平面上，默认情况下，XOZ的假定如下图所示。暂且这么假定，让我们看看结果。</p>
+<h2 id="三维模型的二维可视化展示"><a href="#三维模型的二维可视化展示" class="headerlink" title="三维模型的二维可视化展示"></a>三维模型的二维可视化展示</h2><p>对于三维离散元模型而言，二维的可视化展示就是继续用上面的二维玫瑰花图展示三维的接触力。石崇在<code>辅助分析小程序\6-2三维直接剪切xoz面组构分析-石\三维直接剪切xoz面组构图分布.exe</code>中给出了三维直剪案例的二维可视化程序。字面意思上理解，似乎是对于接触力的三维方向单位向量<code>(x,y,z)</code>，直接舍弃掉<code>y</code>分量，然后通过<code>arctan(z/x)</code>来计算接触力所属的方位子区间。直觉上理解，就是把三维空间沿着<code>y</code>轴投影到<code>XOZ</code>平面上，默认情况下，XOZ的假定如下图所示。暂且这么假定，让我们看看结果。</p>
   <div align="center"> <img src="/PFC/%E5%85%B3%E4%BA%8E%E7%A6%BB%E6%95%A3%E5%85%83%E6%8E%A5%E8%A7%A6%E5%8A%9B%E7%BB%84%E6%9E%84%E5%88%86%E6%9E%90%E7%9A%84%E8%AE%A8%E8%AE%BA/xoz.png" width="50%" height="50%"> </div>  
 ### y分量丢弃方案
 
