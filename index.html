@@ -234,7 +234,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2023-12-07 09:42:05 / Modified: 19:49:30" itemprop="dateCreated datePublished" datetime="2023-12-07T09:42:05+08:00">2023-12-07</time>
+              <time title="Created: 2023-12-07 09:42:05 / Modified: 19:56:50" itemprop="dateCreated datePublished" datetime="2023-12-07T09:42:05+08:00">2023-12-07</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -252,7 +252,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>3.4k</span>
+              <span>3.5k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -272,7 +272,7 @@
 
       
           <h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>所谓接触力组构分析（Analysis of Fabric Anisotropy），就是分析颗粒体系间法向、切向接触力的作用方向，研究力的传递规律，是研究细观介质的一个重要手段，可参考Rothenburg <sup>[1]</sup> 接触力分布函数相关内容。</p>
-<p><img src="/PFC/%E5%85%B3%E4%BA%8E%E7%A6%BB%E6%95%A3%E5%85%83%E6%8E%A5%E8%A7%A6%E5%8A%9B%E7%BB%84%E6%9E%84%E5%88%86%E6%9E%90%E7%9A%84%E8%AE%A8%E8%AE%BA/%E5%85%B3%E4%BA%8E%E7%A6%BB%E6%95%A3%E5%85%83%E6%8E%A5%E8%A7%A6%E5%8A%9B%E7%BB%84%E6%9E%84%E5%88%86%E6%9E%90%E7%9A%84%E8%AE%A8%E8%AE%BA%5C%E7%BB%84%E6%9E%84%E5%88%86%E6%9E%90.png"></p>
+<p><img src="/PFC/%E5%85%B3%E4%BA%8E%E7%A6%BB%E6%95%A3%E5%85%83%E6%8E%A5%E8%A7%A6%E5%8A%9B%E7%BB%84%E6%9E%84%E5%88%86%E6%9E%90%E7%9A%84%E8%AE%A8%E8%AE%BA/%E5%85%B3%E4%BA%8E%E7%A6%BB%E6%95%A3%E5%85%83%E6%8E%A5%E8%A7%A6%E5%8A%9B%E7%BB%84%E6%9E%84%E5%88%86%E6%9E%90%E7%9A%84%E8%AE%A8%E8%AE%BA%5Czgfx.png"></p>
 <center> 图1 接触力组构分析示意图 </center>
 # 二维案例
 
@@ -293,33 +293,34 @@
 <center>切向力结果比对</center>
   <div align="center"> <img src="/PFC/%E5%85%B3%E4%BA%8E%E7%A6%BB%E6%95%A3%E5%85%83%E6%8E%A5%E8%A7%A6%E5%8A%9B%E7%BB%84%E6%9E%84%E5%88%86%E6%9E%90%E7%9A%84%E8%AE%A8%E8%AE%BA/normal_comp2.png" width="90%" height="90%"> </div>  
 <center>法向力结果比对</center>
+这样看的话，将石崇的图形旋转90度才能和笔者程序的图对应上。笔者推断自编程序和石崇程序对于接触力的方位区间划分存在差异，那么存在差异的话，**石崇程序可能是如何编写？孰对孰错？**但是从文献<sup>[1,2]</sup>中对于法向力的展示结果来看，单轴、双轴试验的法向力玫瑰花图都是竖着的而不是横着的。难道网上公布的这个`辅助分析小程序/6-组构分析-石/plot_rose_picture_2D.exe`程序是个错误的版本？
 
-<p>这样看的话，将石崇的图形旋转90度才能和笔者程序的图对应上。笔者推断自编程序和石崇程序对于接触力的方位区间划分存在差异，那么存在差异的话，<strong>石崇程序可能是如何编写？孰对孰错？</strong>但是从文献<sup>[1,2]</sup>中对于法向力的展示结果来看，单轴、双轴试验的法向力玫瑰花图都是竖着的而不是横着的。难道网上公布的这个<code>辅助分析小程序/6-组构分析-石/plot_rose_picture_2D.exe</code>程序是个错误的版本？</p>
   <div align="center"> <img src="/PFC/%E5%85%B3%E4%BA%8E%E7%A6%BB%E6%95%A3%E5%85%83%E6%8E%A5%E8%A7%A6%E5%8A%9B%E7%BB%84%E6%9E%84%E5%88%86%E6%9E%90%E7%9A%84%E8%AE%A8%E8%AE%BA/sznormal.png" width="80%" height="80%"> </div>  
 <center>文献2中法向力的玫瑰花图结果</center>
 
-
 <h1 id="三维案例"><a href="#三维案例" class="headerlink" title="三维案例"></a>三维案例</h1><h2 id="三维模型的二维可视化展示"><a href="#三维模型的二维可视化展示" class="headerlink" title="三维模型的二维可视化展示"></a>三维模型的二维可视化展示</h2><p>对于三维离散元模型而言，二维的可视化展示就是继续用上面的二维玫瑰花图展示三维的接触力。石崇在<code>辅助分析小程序\6-2三维直接剪切xoz面组构分析-石\三维直接剪切xoz面组构图分布.exe</code>中给出了三维直剪案例的二维可视化程序。字面意思上理解，似乎是对于接触力的三维方向单位向量<code>(x,y,z)</code>，直接舍弃掉<code>y</code>分量，然后通过<code>arctan(z/x)</code>来计算接触力所属的方位子区间。直觉上理解，就是把三维空间沿着<code>y</code>轴投影到<code>XOZ</code>平面上，默认情况下，XOZ的假定如下图所示。暂且这么假定，让我们看看结果。</p>
   <div align="center"> <img src="/PFC/%E5%85%B3%E4%BA%8E%E7%A6%BB%E6%95%A3%E5%85%83%E6%8E%A5%E8%A7%A6%E5%8A%9B%E7%BB%84%E6%9E%84%E5%88%86%E6%9E%90%E7%9A%84%E8%AE%A8%E8%AE%BA/xoz.png" width="50%" height="50%"> </div>  
+### y分量丢弃方案
 
-<h3 id="y分量丢弃方案"><a href="#y分量丢弃方案" class="headerlink" title="y分量丢弃方案"></a>y分量丢弃方案</h3><p>首先可以看到<code>辅助分析小程序\6-2三维直接剪切xoz面组构分析-石</code>文件夹下，用于示范的<code>pfc_contact_information.dat</code>文件每行只有9个数据，而如果按照<code>辅助分析小程序\6-2三维直接剪切xoz面组构分析-石\导出接触信息命令流PFC3D5.0.txt</code>中的代码（下示代码），导出的数据每行应该具有12个数据。点击运行<code>三维直接剪切xoz面组构图分布.exe</code>，每行9个数据的文件报错，也就是说这里文件夹本身包含的示范文件有错误，应该要按照下示代码导出每行12个数据的接触信息文件。</p>
+<p>首先可以看到<code>辅助分析小程序\6-2三维直接剪切xoz面组构分析-石</code>文件夹下，用于示范的<code>pfc_contact_information.dat</code>文件每行只有9个数据，而如果按照<code>辅助分析小程序\6-2三维直接剪切xoz面组构分析-石\导出接触信息命令流PFC3D5.0.txt</code>中的代码（下示代码），导出的数据每行应该具有12个数据。点击运行<code>三维直接剪切xoz面组构图分布.exe</code>，每行9个数据的文件报错，也就是说这里文件夹本身包含的示范文件有错误，应该要按照下示代码导出每行12个数据的接触信息文件。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">contact_info(count)= string(contact.<span class="built_in">id</span>(cp))+<span class="string">&#x27; &#x27;</span>+string(contact.pos.x(cp))+<span class="string">&#x27;  &#x27;</span> + string(contact.pos.y(cp)) +<span class="string">&#x27;  &#x27;</span> + string(contact.pos.z(cp)) </span><br><span class="line">contact_info(count)=contact_info(count)+<span class="string">&#x27; &#x27;</span> +string(contact.normal.x(cp))+<span class="string">&#x27; &#x27;</span> +string(contact.normal.y(cp))+<span class="string">&#x27; &#x27;</span> +string(contact.normal.z(cp))         </span><br><span class="line">contact_info(count)=contact_info(count)+<span class="string">&#x27; &#x27;</span> +string(contact.shear.x(cp))+<span class="string">&#x27; &#x27;</span> +string(contact.shear.y(cp))+<span class="string">&#x27; &#x27;</span> +string(contact.shear.z(cp))</span><br><span class="line">contact_info(count)=contact_info(count)+<span class="string">&#x27; &#x27;</span> +string(contact.force.normal(cp))+<span class="string">&#x27; &#x27;</span> +string(contact.force.shear(cp))</span><br></pre></td></tr></table></figure>
 
 <p>因此，笔者又导出了某个三维单轴压缩模型的接触力信息文件，用于推测这个绘制XOZ面组构玫瑰花图程序的实现方式。下面是石崇程序的结果：</p>
   <div align="center"> <img src="/PFC/%E5%85%B3%E4%BA%8E%E7%A6%BB%E6%95%A3%E5%85%83%E6%8E%A5%E8%A7%A6%E5%8A%9B%E7%BB%84%E6%9E%84%E5%88%86%E6%9E%90%E7%9A%84%E8%AE%A8%E8%AE%BA/sc_xoz.png" width="80%" height="80%"> </div>  
 <center>石崇程序XOZ面组构分析结果</center>
+单论法向力而言，主要分布方向还是水平的，**发布的究竟是什么程序？**
 
-<p>单论法向力而言，主要分布方向还是水平的，<strong>发布的究竟是什么程序？</strong></p>
 <p>根据舍弃y分量方案，笔者给出了自己的实现结果：</p>
   <div align="center"> <img src="/PFC/%E5%85%B3%E4%BA%8E%E7%A6%BB%E6%95%A3%E5%85%83%E6%8E%A5%E8%A7%A6%E5%8A%9B%E7%BB%84%E6%9E%84%E5%88%86%E6%9E%90%E7%9A%84%E8%AE%A8%E8%AE%BA/ty_hb.png" width="80%" height="80%"> </div>  
 <center>自编程序-y分量舍弃方案分析结果</center>
+我们可以看到对于切向力而言，存在些许异常，这是可以预见的，由于y分量的舍弃，计算方位子区间（等价于计算方向向量的倾角）的公式由`arctan(z/sqrt(x2+y2))`变成了`arctan(z/x)`，如果y分量的值较大，那么使用`arctan(z/x)`计算的结果也会变大，即统计结果向90度和270度聚集。
 
-<p>我们可以看到对于切向力而言，存在些许异常，这是可以预见的，由于y分量的舍弃，计算方位子区间（等价于计算方向向量的倾角）的公式由<code>arctan(z/sqrt(x2+y2))</code>变成了<code>arctan(z/x)</code>，如果y分量的值较大，那么使用<code>arctan(z/x)</code>计算的结果也会变大，即统计结果向90度和270度聚集。</p>
 <h3 id="方向向量旋转方案"><a href="#方向向量旋转方案" class="headerlink" title="方向向量旋转方案"></a>方向向量旋转方案</h3><p>既然直接舍弃y分量，会使得分区的统计结果向90度和270聚集，那么就依据接触力方向向量的倾角划分，并且结合x分量的正负值决定该方向向量归属于XOZ面的X正半轴还是X负半轴，直觉上理解就是将接触力依据X分量的正负旋转到XOZ平面上，然后对接触力进行统计，结果如下：</p>
   <div align="center"> <img src="/PFC/%E5%85%B3%E4%BA%8E%E7%A6%BB%E6%95%A3%E5%85%83%E6%8E%A5%E8%A7%A6%E5%8A%9B%E7%BB%84%E6%9E%84%E5%88%86%E6%9E%90%E7%9A%84%E8%AE%A8%E8%AE%BA/xz_hb.png" width="80%" height="80%"> </div>  
 <center>自编程序-旋转方案分析结果</center>
+### 讨论
 
-<h3 id="讨论"><a href="#讨论" class="headerlink" title="讨论"></a>讨论</h3><p>似乎上面两种方案由于信息的压缩呈现结果都不太完美，大家觉得哪种用于论文更合理？</p>
+<p>似乎上面两种方案由于信息的压缩呈现结果都不太完美，大家觉得哪种用于论文更合理？</p>
 <h2 id="三维模型的三维可视化展示"><a href="#三维模型的三维可视化展示" class="headerlink" title="三维模型的三维可视化展示"></a>三维模型的三维可视化展示</h2><p>即用三维图形来展示三维的接触力，理论上可以把一个球面进行分区，然后在每个分区上绘制统计结果的柱状图。然而目前笔者还没有很好的思路做到这一点，欢迎大家交流讨论。</p>
 <h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><p>[1] ROTHENBURG L, BATHURST R J. Analytical study of  induced anisotropy in idealized granular materials[J].  Géotechnique, 1989, 39(4): 601–614.</p>
 <p>[2] 张强,汪小刚,赵宇飞,刘立鹏，林兴超，石崇.不同围压加载方式下土石混合体变形破坏机制颗粒流模拟研究[J].岩土工程学报, 2018, 40(11):10.DOI:10.11779&#x2F;CJGE201811011.</p>
