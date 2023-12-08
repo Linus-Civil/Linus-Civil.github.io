@@ -4,7 +4,7 @@
   <url>
     <loc>https://liuyong.info/5b569d1cb868/</loc>
     
-    <lastmod>2023-12-07</lastmod>
+    <lastmod>2023-12-08</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -49,7 +49,7 @@
 
   <url>
     <loc>https://liuyong.info/</loc>
-    <lastmod>2023-12-07</lastmod>
+    <lastmod>2023-12-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -57,35 +57,35 @@
   
   <url>
     <loc>https://liuyong.info/tags/Commands-Collection/</loc>
-    <lastmod>2023-12-07</lastmod>
+    <lastmod>2023-12-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://liuyong.info/tags/Development-Deployment/</loc>
-    <lastmod>2023-12-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://liuyong.info/tags/Mechanics-Analysis/</loc>
-    <lastmod>2023-12-07</lastmod>
+    <lastmod>2023-12-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://liuyong.info/tags/Tutorial/</loc>
-    <lastmod>2023-12-07</lastmod>
+    <lastmod>2023-12-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://liuyong.info/tags/Version-control/</loc>
-    <lastmod>2023-12-07</lastmod>
+    <lastmod>2023-12-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://liuyong.info/tags/Mechanics-Analysis/</loc>
+    <lastmod>2023-12-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -94,14 +94,14 @@
   
   <url>
     <loc>https://liuyong.info/categories/Tools-of-Programming/</loc>
-    <lastmod>2023-12-07</lastmod>
+    <lastmod>2023-12-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://liuyong.info/categories/PFC/</loc>
-    <lastmod>2023-12-07</lastmod>
+    <lastmod>2023-12-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
